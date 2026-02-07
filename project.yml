@@ -1,0 +1,24 @@
+name: ModularApp-Feature-Home
+options:
+  bundleIdPrefix: com.alesh14.modularapp
+  deploymentTarget:
+    iOS: "16.0"
+  generateEmptyDirectories: true
+
+targets:
+  ModularApp-Feature-Home:
+    type: framework
+    platform: iOS
+    sources:
+      - ModularApp-Feature-Home-Api
+      - ModularApp-Feature-Home-Domain
+      - ModularApp-Feature-Home-Data
+      - ModularApp-Feature-Home-Presentation
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        PRODUCT_BUNDLE_IDENTIFIER: com.alesh14.modularapp.feature.home
+        GENERATE_INFOPLIST_FILE: YES
+    scheme:
+      testTargets: []
+      gatherCoverageData: false
